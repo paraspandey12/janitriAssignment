@@ -40,7 +40,8 @@ Create a .env file at the root of your project with the following content:
 3. npm start
  This will start the backend server on the specified port (default: 5000).
 
-4. API Endpoints
+4. API Endpoint
+   
    User Management
 1. Register a User
 Endpoint: POST /api/users/register
@@ -65,7 +66,6 @@ Response: A success or error message.
  Patient Management
 3. Add a Patient
 Endpoint: POST /api/patients
-
 Request Body:
 {
   "name": "John Doe",
@@ -79,7 +79,7 @@ Endpoint: GET /api/patients
 Response: A list of all patients in the database.
 
 Heart Rate Monitoring
-6. Record Heart Rate Data
+5. Record Heart Rate Data
 Endpoint: POST /api/heartRate
 Request Body:
 {
