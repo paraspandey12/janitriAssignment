@@ -35,62 +35,58 @@ Ensure you have the following installed:
    cd janitri-backend
 
 2. npm install
-Create a .env file at the root of your project with the following content:
+   Create a .env file at the root of your project with the following content:
 
 3. npm start
- This will start the backend server on the specified port (default: 5000).
+   This will start the backend server on the specified port (default: 5000).
 
 4. API Endpoint
-   
-   User Management
-1. Register a User
-Endpoint: POST /api/users/register
+   1. Register a User
+      Endpoint: POST /api/users/register
 
-Request Body:
-{
-  "email": "user@example.com",
-  "password": "securepassword"
-}
-Response: A success or error message.
+         Request Body:
+       {
+       "email": "user@example.com",
+       "password": "securepassword"
+        }
+       Response: A success or error message.
 
-2. Login a User
-Endpoint: POST /api/users/login
+   2. Login a User
+       Endpoint: POST /api/users/login
+        Request Body:
+         {
+         "email": "user@example.com",
+        "password": "securepassword"
+        }
+       Response: A success or error message.
 
-Request Body:
-{
-  "email": "user@example.com",
-  "password": "securepassword"
-}
-Response: A success or error message.
+ 
+   3. Add a Patient
+       Endpoint: POST /api/patients
+       Request Body:
+         {
+         "name": "John Doe",
+         "age": 45,
+         "userId": "user_id_here"
+        }
+       Response: The added patient details.
 
- Patient Management
-3. Add a Patient
-Endpoint: POST /api/patients
-Request Body:
-{
-  "name": "John Doe",
-  "age": 45,
-  "userId": "user_id_here"
-}
-Response: The added patient details.
+    4. Get All Patients
+      Endpoint: GET /api/patients
+      Response: A list of all patients in the database.
 
-4. Get All Patients
-Endpoint: GET /api/patients
-Response: A list of all patients in the database.
+    5. Record Heart Rate Data
+       Endpoint: POST /api/heartRate
+       Request Body:
+       {
+        "patientId": "patient_id_here",
+         "heartRate": 72
+       }
+       Response: The recorded heart rate data.
 
-Heart Rate Monitoring
-5. Record Heart Rate Data
-Endpoint: POST /api/heartRate
-Request Body:
-{
-  "patientId": "patient_id_here",
-  "heartRate": 72
-}
-Response: The recorded heart rate data.
-
-6. Get Heart Rate Data
-Endpoint: GET /api/heartRate/:patientId
-Response: Heart rate data for the given patient ID.
+   6. Get Heart Rate Data
+      Endpoint: GET /api/heartRate/:patientId
+      Response: Heart rate data for the given patient ID.
 
 Error Handling
 400: Bad Request (Missing/Invalid data)
