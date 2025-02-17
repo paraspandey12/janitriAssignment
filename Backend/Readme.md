@@ -1,4 +1,4 @@
-# Janitri Backend
+#  Backend
 
 This is a backend project designed to manage users, patients, and heart rate monitoring data. It uses **Node.js**, **Express**, and **MongoDB** to handle the API and data management. The backend provides a set of RESTful APIs for registration, login, patient management, and heart rate recording.
 
